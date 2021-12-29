@@ -1,9 +1,10 @@
 const e = require("express");
 const emitter = require("../config/event");
 
-function  Process(pid, priority) {
+function  Process(pid, priority, type) {
     this.pid= pid;
     this.priority = priority;
+    this.type = type;
     this.createdAt = new Date();
 
     this.killProcess = function kill () {
